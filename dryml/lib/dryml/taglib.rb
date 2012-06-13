@@ -20,7 +20,7 @@
         end
 
         def clear_cache
-          @cache = {}
+          #@cache = {}
         end
 
         private
