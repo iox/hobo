@@ -56,7 +56,7 @@
             if(!clone) return this;
             clone.hide('fast');
             return this;
-        },
+        }
     };
 
     var defaultOptions = function() {
