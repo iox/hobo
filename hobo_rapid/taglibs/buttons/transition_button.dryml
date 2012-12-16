@@ -50,9 +50,9 @@ If the transition could not be found, the user does not have permissions for the
 
     if (!ajax_attributes.empty?) && !has_params
       ajax_attributes[:message] ||= label
-      ajax_attributes[:method] = html_attributes[:method]
-    %><form lifecycle="&transition_name" merge-attrs="&ajax_attributes" class="button_to" param>
+    %><form action="&object_url(this, transition_name)" method="post" lifecycle="&transition_name" merge-attrs="&ajax_attributes" class="button_to" param>
         <input type="hidden" name="key" value="&this.lifecycle.provided_key" if="&this.lifecycle.provided_key"/>
+        <input type="hidden" name="_method" value="put"/>
         <submit label="&label" merge-attributes="&html_attributes" param="button"/>
       </form><%
     else %><%=
